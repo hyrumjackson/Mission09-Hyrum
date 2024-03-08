@@ -22,9 +22,13 @@ function Welcome() {
       <h1>Welcome to the College Basketball Teams Directory!</h1>
       <p>
         Explore a comprehensive list of college basketball teams across various
-        conferences. Get to know the team names, mascots, and their locations.
-        Whether you're a die-hard basketball fan or just curious, this is your
-        go-to resource for college basketball teams.
+        conferences. Dive into the details of team names, mascots, and their
+        home cities. Whether you're a die-hard basketball enthusiast or simply
+        browsing, this is your ultimate guide to college basketball teams.{' '}
+        <b>
+          Keep an eye out for a special tribute to a certain team. Can you spot
+          the standout squad?
+        </b>
       </p>
     </header>
   );
@@ -35,9 +39,14 @@ class TeamComponent extends React.Component<Team> {
   render() {
     const { school, name, city, state } = this.props;
 
+    // Easter egg hehe
+    const isBYU = school === 'Brigham Young';
+
+    const cardClass = isBYU ? 'team-card byu' : 'team-card';
+
     // Return a structured HTML representation of a team card
     return (
-      <div className="team-card">
+      <div className={cardClass}>
         <h2 className="team-school">{school}</h2>
         <h3 className="team-name">{name}</h3>
         <p className="team-location">

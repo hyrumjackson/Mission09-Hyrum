@@ -14,6 +14,17 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.team-card.byu {
+  background-color: #002255; /* BYU's primary blue color */
+  color: #ffffff; /* White text for better contrast */
+}
+
+.team-card.byu .team-school,
+.team-card.byu .team-name,
+.team-card.byu .team-location {
+  color: #ffffff; /* White text for better contrast */
+}
+
 .team-school {
   color: #333;
   margin-bottom: 5px;
